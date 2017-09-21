@@ -129,6 +129,78 @@
 }
 span{ display:block; width:100%; text-align:left}
 
+.high {
+    background: #fff;
+    padding: 30px 0;
+}
+/*
+   general styles
+*/
+.center-block-horiz {
+   margin-left: auto !important;
+   margin-right: auto !important;
+ }
+.set-margin-cicis-menu-to-go {
+  margin: 20px;
+}
+.set-padding-cicis-menu-to-go {
+  padding: 20px;
+}
+.set-border-cicis-menu-to-go {
+   border: 5px inset #4f4f4f;
+}
+set-box-shadow-cicis-menu-to-go {
+  -webkit-box-shadow: 4px 4px 14px #4f4f4f;
+     -moz-box-shadow: 4px 4px 14px #4f4f4f;
+          box-shadow: 4px 4px 14px #4f4f4f;
+}
+  
+/*
+** Style the iframe
+** =========================
+*/
+/*
+    css commmon to all iframes
+*/
+.responsive-wrapper {
+  position: relative;
+  height: 0;    /* gets height from padding-bottom */
+  overflow: hidden;
+  /* put following styles (necessary for overflow and 
+     scrolling handling) inline in .embed-responsive-element-wrapper around iframe because not stable in CSS
+    -webkit-overflow-scrolling: touch; 
+                      overflow: auto; */
+}
+.responsive-wrapper img,
+.responsive-wrapper object,
+.responsive-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   
+  border-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+    css particular to this iframe
+*/
+
+#Iframe-Cicis-Menu-To-Go {
+  max-width: 666.67px;
+  max-height: 600px;
+  overflow: hidden;
+}
+/*
+   padding-bottom = h/w as %
+*/
+.responsive-wrapper-padding-bottom-90pct {
+  padding-bottom: 90%;
+}
+
 </style>
 
 <head>
@@ -193,9 +265,10 @@ span{ display:block; width:100%; text-align:left}
 <div id="navbar" class="navbar-collapse collapse">
 <ul class="nav navbar-nav navbar-right">
 <li class="active"><a href="#home">Home</a></li>
-<li class="active"><a href="#About">About</a></li>
+<li><a href="#About">About</a></li>
 <li><a href="#Description">COURSE CONTENTS</a></li>
 <li><a href="#Registration">OBJECTIVES AND RULES</a></li>
+<li><a href="#register">registration</a></li>
 <li><a href="#Co-ordinators">Co-ordinators</a></li>
 <li><a href="#Contact">Contact</a></li>
 </ul>
@@ -249,7 +322,7 @@ No Registration Fee</p>
 <div class="col-md-3">
 
 <div class="header_bottom-bg">
-<a class="btn btn-default btn-xl wow zoomIn" data-wow-delay="0.3s" onclick="myFunction1()">REGISTER</a>
+<a class="btn btn-default btn-xl wow zoomIn" data-wow-delay="0.3s" href="#register">REGISTER</a>
 <p id="demo1" class="headline-support wow fadeInDown">
 </p>
 </div>
@@ -429,16 +502,7 @@ No Registration Fee</p>
 </ul>
 </div>
 </div>
-<!--<div class="col-md-4">
-<div class="pricing-item highlighted-plan wow zoomIn" data-wow-delay="0.3s" data-wow-duration="2s">
-<div class="plan-name">Register</div>
-<ul class="plan-features">
-<li class="speaker-info"><strong> Date </strong> </br><div class="price"><span class="curr">04.09.2017 to 22.09.2017</span></div></li>
-<li class="speaker-info"><strong>FREE ACCOMODATION</strong></li>
-</ul>
-<a class="btn btn-success btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSfmhW5vy1bpmwLEF5sX-2B8CU5EjHfEBBytH_XCqku1GBTRLQ/viewform?c=0&amp;w=1&amp;includes_info_params=true">REGISTER</a>
-</div>
-</div>-->
+
 <div class="col-md-6">
 <div class="pricing-item highlighted-plan wow zoomIn" data-wow-delay="0.6s" data-wow-duration="2s">
 <div class="plan-name">Rules & Guidelines for the Participants</div>
@@ -467,6 +531,34 @@ Selection Notification:03.10.17</h6></li>
 </div>
 
 </div>
+</section>
+
+<section class="high" id="register">
+<div class="container">
+<br>
+<h4 class="countdown_title text-center wow fadeInLeft">REGISTRATION</h4>
+<p class="lead tex  wow fadeInUp" style="font-weight:600;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To register, download and fill-up the form below, get it certified by the head of your institution, and post to the following address:</p>
+<p class="lead tex  wow fadeInUp" style="font-weight:600;">The Convenor,
+<br>Department of Computer Science & Engineering,
+<br>Bannari Amman Institute Of Technology,
+<br>Sathyamangalam.
+<br>Tamil Nadu.
+</p>
+<!-- responsive iframe --> 
+<!-- ============== -->
+
+<div id="Iframe-Cicis-Menu-To-Go" class="set-margin-cicis-menu-to-go set-padding-cicis-menu-to-go set-border-cicis-menu-to-go set-box-shadow-cicis-menu-to-go center-block-horiz">
+  <div class="responsive-wrapper 
+     responsive-wrapper-padding-bottom-90pct"
+     style="-webkit-overflow-scrolling: touch; overflow: auto;">
+     <iframe src="https://drive.google.com/file/d/0B3c1RAmZ9wakLVR0NDEyMXJvSUE/preview">
+      <p style="font-size: 110%;"><em><strong>ERROR: </strong>  
+An &#105;frame should be displayed here but your browser version does not support &#105;frames.</em> Please update your browser to its most recent version and try again, or access the file <a href="https://drive.google.com/file/d/0B3c1RAmZ9wakLVR0NDEyMXJvSUE/preview"with this link.</a></p>
+    </iframe>
+  </div>
+</div>
+</div>
+
 </section>
 
 <section class="benefits highlight" id="Co-ordinators">
